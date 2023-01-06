@@ -1,0 +1,22 @@
+:root {
+  --font-sm: 14px;
+  --font-bs: 16px;
+  --font-md: 24px;
+  --font-lg: 30px;
+
+  --font-raleway: 'Raleway', sans-serif;
+  --font-opensans: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-raleway);
+  color: var(--white);
+}
+
+p {
+  color: var(--white);
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}

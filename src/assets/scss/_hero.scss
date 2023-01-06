@@ -1,0 +1,48 @@
+.hero {
+  background: var(--darkBlue);
+  height: 120vh;
+  background-image: url('./../img/bg-curvy-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  @include breakpoint(medium) {
+    background-image: url('./../img/bg-curvy-desktop.svg');
+  }
+
+  &__img {
+    @include breakpoint(medium) {
+      width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h1 {
+      text-align: center;
+
+      @include breakpoint(medium) {
+        width: 500px;
+        text-align: center;
+      }
+    }
+
+    p {
+      text-align: center;
+      padding-bottom: 30px;
+
+      @include breakpoint(medium) {
+        width: 500px;
+      }
+    }
+
+    a {
+
+    }
+  }
+}

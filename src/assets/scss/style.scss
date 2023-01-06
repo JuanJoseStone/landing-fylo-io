@@ -1,0 +1,15 @@
+@import 'breakpoints';
+@import 'functions';
+@import 'colors';
+@import 'fonts';
+@import 'globals';
+
+@import 'header';
+@import 'hero';
+@import 'services';
+@import 'articles';
+
+body {
+  font-family: var(--font-opensans);
+  background: var(--darkBlueMain);
+}

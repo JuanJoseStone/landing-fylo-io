@@ -1,0 +1,346 @@
+/* 640, 1024 1400 */ /*
+- Dark Blue (intro and email sign up background): hsl(217, 28%, 15%)
+- Dark Blue (main background): hsl(218, 28%, 13%)
+- Dark Blue (footer background): hsl(216, 53%, 9%)
+- Dark Blue (testimonials background): hsl(219, 30%, 18%)
+
+### Accent
+
+- Cyan (inside call-to-action gradient): hsl(176, 68%, 64%)
+- Blue (inside call-to-action gradient): hsl(198, 60%, 50%)
+- Light Red (error): hsl(0, 100%, 63%)
+
+### Neutral
+
+- White: hsl (0, 0%, 100%)
+*/
+:root {
+  /* primary */
+  --darkBlue: hsl(217, 28%, 15%);
+  --darkBlueMain: hsl(218, 28%, 13%);
+  --darkBlueFooter: hsl(216, 53%, 9%);
+  --darkBlueTestimonial: hsl(219, 30%, 18%);
+  /* accent */
+  --cyan: hsl(176, 68%, 64%);
+  --blue: hsl(198, 60%, 50%);
+  --lightRed: hsl(0, 100%, 63%);
+  /* neutral */
+  --white: hsl(0, 0%, 100%);
+}
+
+:root {
+  --font-sm: 14px;
+  --font-bs: 16px;
+  --font-md: 24px;
+  --font-lg: 30px;
+  --font-raleway: "Raleway", sans-serif;
+  --font-opensans: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-raleway);
+  color: var(--white);
+}
+
+p {
+  color: var(--white);
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 48rem;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 64rem;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    max-width: 80rem;
+  }
+}
+.container--pall {
+  padding-top: 4.375rem;
+  padding-right: 1.5rem;
+  padding-bottom: 4.375rem;
+  padding-left: 1.5rem;
+}
+@media (min-width: 1440px) {
+  .container--pall {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.container--py {
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+}
+@media (min-width: 1440px) {
+  .container--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.container--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.container--pt {
+  padding-top: 4.375rem;
+}
+@media (min-width: 1440px) {
+  .container--pt {
+    padding-top: 6rem;
+  }
+}
+.container--pr {
+  padding-right: 1.5rem;
+}
+.container--pb {
+  padding-bottom: 4.375rem;
+}
+@media (min-width: 1440px) {
+  .container--pb {
+    padding-bottom: 6rem;
+  }
+}
+.container--pl {
+  padding-left: 1.5rem;
+}
+.container--pa {
+  padding: 1.5rem;
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-s {
+  justify-content: start;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-e {
+  justify-content: end;
+}
+.flex-ai-s {
+  align-items: start;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-ai-e {
+  align-items: end;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-sa {
+  justify-content: space-around;
+}
+
+.btn {
+  background: var(--cyan);
+  padding: 12px 54px;
+  border-radius: 30px;
+  color: var(--white);
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .hide-for-tablet {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+}
+.header__logo {
+  width: 100px;
+}
+.header__logo img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.header__menu {
+  width: 200px;
+}
+.header__menu-links {
+  padding-left: 0;
+}
+.header__menu-link {
+  list-style: none;
+  position: relative;
+}
+.header__menu-link::before {
+  content: "";
+  position: absolute;
+  background: var(--white);
+  height: 0;
+  width: 0;
+  bottom: -6px;
+  transition: all 300ms;
+}
+.header__menu-link:hover::before {
+  height: 3px;
+  width: 100%;
+}
+.header__menu-link a {
+  color: var(--white);
+}
+
+.hero {
+  background: var(--darkBlue);
+  height: 120vh;
+  background-image: url("./../img/bg-curvy-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+@media (min-width: 640px) {
+  .hero {
+    background-image: url("./../img/bg-curvy-desktop.svg");
+  }
+}
+@media (min-width: 640px) {
+  .hero__img {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.hero__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero__intro h1 {
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .hero__intro h1 {
+    width: 500px;
+    text-align: center;
+  }
+}
+.hero__intro p {
+  text-align: center;
+  padding-bottom: 30px;
+}
+@media (min-width: 640px) {
+  .hero__intro p {
+    width: 500px;
+  }
+}
+.services__wrap {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 60px;
+}
+@media (min-width: 640px) {
+  .services__wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.services__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services__item img {
+  width: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.services__item p {
+  text-align: center;
+}
+
+.articles__wrap {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 640px) {
+  .articles__wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.articles__img {
+  padding-bottom: 50px;
+}
+@media (min-width: 640px) {
+  .articles__img {
+    padding-bottom: 0;
+  }
+}
+.articles__img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (min-width: 640px) {
+  .articles__context {
+    padding-left: 50px;
+  }
+}
+.articles__context .link {
+  display: inline-block;
+  position: relative;
+}
+.articles__context .link a {
+  color: var(--cyan);
+  display: flex;
+  align-items: center;
+}
+.articles__context .link a ion-icon {
+  padding-left: 5px;
+  font-size: 20px;
+}
+.articles__context .link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--cyan);
+  bottom: -6px;
+}
+
+body {
+  font-family: var(--font-opensans);
+  background: var(--darkBlueMain);
+}/*# sourceMappingURL=style.css.map */
