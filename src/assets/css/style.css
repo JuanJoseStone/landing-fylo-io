@@ -76,7 +76,7 @@ img {
     max-width: 48rem;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1040px) {
   .container {
     max-width: 64rem;
   }
@@ -92,7 +92,7 @@ img {
   padding-bottom: 4.375rem;
   padding-left: 1.5rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1040px) {
   .container--pall {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -102,7 +102,7 @@ img {
   padding-top: 4.375rem;
   padding-bottom: 4.375rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1040px) {
   .container--py {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -115,7 +115,7 @@ img {
 .container--pt {
   padding-top: 4.375rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1040px) {
   .container--pt {
     padding-top: 6rem;
   }
@@ -126,7 +126,7 @@ img {
 .container--pb {
   padding-bottom: 4.375rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1040px) {
   .container--pb {
     padding-bottom: 6rem;
   }
@@ -172,6 +172,8 @@ img {
   border-radius: 30px;
   color: var(--white);
   text-align: center;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 @media (min-width: 640px) {
@@ -180,7 +182,7 @@ img {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1040px) {
   .hide-for-desktop {
     display: none;
   }
@@ -202,6 +204,8 @@ img {
 }
 .header__menu-links {
   padding-left: 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 .header__menu-link {
   list-style: none;
@@ -338,6 +342,243 @@ img {
   height: 2px;
   background: var(--cyan);
   bottom: -6px;
+}
+
+.testimonials {
+  margin-bottom: 200px;
+}
+.testimonials__wrap {
+  display: grid;
+  gap: 50px;
+  background-image: url("./../img/bg-quotes.png");
+  background-repeat: no-repeat;
+  background-position: 1.5rem 0;
+  background-size: 80px;
+}
+@media (min-width: 640px) {
+  .testimonials__wrap {
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.testimonials__item {
+  background: var(--darkBlueTestimonial);
+  padding: 24px;
+  border-radius: 3px;
+}
+.testimonials__item p {
+  padding-bottom: 16px;
+  color: rgb(187, 187, 187);
+}
+@media (min-width: 640px) {
+  .testimonials__item p {
+    font-size: 14px;
+  }
+}
+.testimonials__meta {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.testimonials__meta img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.testimonials__meta h4 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.testimonials__meta span {
+  color: rgb(187, 187, 187);
+}
+@media (min-width: 640px) {
+  .testimonials__meta span {
+    font-size: 14px;
+  }
+}
+
+.footer {
+  position: relative;
+  background: var(--darkBlueFooter);
+}
+.footer__form-contact {
+  background-color: var(--darkBlue);
+  padding: 24px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%) translateY(50%);
+}
+@media (min-width: 640px) {
+  .footer__form-contact {
+    min-width: 700px;
+  }
+}
+.footer__form-contact h2, .footer__form-contact p {
+  max-width: 500px;
+}
+.footer__form-contact input {
+  line-height: 2.3rem;
+  border-radius: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  min-width: 300px;
+  border: none;
+  outline: none;
+  margin-bottom: 12px;
+}
+@media (min-width: 640px) {
+  .footer__form-contact input {
+    margin-bottom: 0;
+  }
+}
+.footer__form-contact .footer--btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media (min-width: 640px) {
+  .footer__form-contact .footer--btn {
+    width: auto;
+  }
+}
+.footer__main {
+  padding-top: 200px;
+}
+.footer__content {
+  display: grid;
+}
+@media (min-width: 640px) {
+  .footer__content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+.footer__logo {
+  margin-bottom: 50px;
+}
+@media (min-width: 640px) {
+  .footer__logo {
+    margin-bottom: 0;
+  }
+}
+.footer__logo img {
+  width: 250px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer__column-one {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 640px) {
+  .footer__column-one {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+  }
+}
+.footer__column-one .footer__location {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 14px;
+}
+@media (min-width: 640px) {
+  .footer__column-one .footer__location {
+    margin-bottom: 0;
+  }
+}
+.footer__column-one .footer__location img {
+  width: 32px;
+  height: 32px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-top: 16px;
+}
+.footer__column-one .footer__location p {
+  font-size: 14px;
+}
+.footer__column-one .footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+@media (min-width: 640px) {
+  .footer__column-one .footer__contact {
+    margin-bottom: 0;
+    margin-top: 18px;
+  }
+}
+.footer__column-one .footer__contact div {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.footer__column-one .footer__contact img {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer__column-one .footer__contact span {
+  color: var(--white);
+  font-size: 14px;
+}
+.footer__column-two {
+  display: grid;
+}
+@media (min-width: 640px) {
+  .footer__column-two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.footer__column-two div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+@media (min-width: 640px) {
+  .footer__column-two div:nth-child(1) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer__column-two ul {
+  list-style: none;
+  color: var(--white);
+  padding-left: 0;
+}
+.footer__column-two ul:nth-child(1) {
+  margin-bottom: 30px;
+}
+.footer__column-two div:nth-child(2) ul {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.footer__column-two div:nth-child(2) ul ion-icon {
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+  cursor: pointer;
+  transition: background 300ms;
+}
+.footer__column-two div:nth-child(2) ul li:hover ion-icon {
+  background: var(--cyan);
+}
+.footer__column-two li:not(:last-child) {
+  padding-bottom: 14px;
 }
 
 body {
